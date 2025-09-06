@@ -1,10 +1,8 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { GraduationCap, Briefcase, MapPin, Calendar } from 'lucide-react';
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 px-4 bg-secondary/50">
+  return <section id="about" className="py-20 px-4 bg-secondary/50">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -18,9 +16,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Bio Section */}
           <div>
-            <h3 className="text-2xl font-semibold text-primary mb-6">
-              Who I Am
-            </h3>
+            <h3 className="text-2xl font-semibold text-primary mb-6">Who I Zain</h3>
             <p className="text-muted-foreground leading-relaxed mb-6">
               Full Stack Developer with 1.5+ years of experience designing and building 
               scalable web applications using React.js, Node.js, Next.js, Express.js, 
@@ -38,22 +34,9 @@ const About = () => {
             <div className="mt-8">
               <h4 className="text-lg font-semibold text-primary mb-4">Key Strengths</h4>
               <div className="flex flex-wrap gap-2">
-                {[
-                  'API Development', 
-                  'Server-Side Rendering', 
-                  'Database Optimization', 
-                  'Microservices', 
-                  'Performance Tuning',
-                  'Cloud Architecture'
-                ].map((strength) => (
-                  <Badge 
-                    key={strength}
-                    variant="outline"
-                    className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors"
-                  >
+                {['API Development', 'Server-Side Rendering', 'Database Optimization', 'Microservices', 'Performance Tuning', 'Cloud Architecture'].map(strength => <Badge key={strength} variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors">
                     {strength}
-                  </Badge>
-                ))}
+                  </Badge>)}
               </div>
             </div>
           </div>
@@ -117,8 +100,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
