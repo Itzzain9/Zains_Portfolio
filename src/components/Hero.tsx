@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
-import profileImage from '@/assets/profile-headshot.jpg';
 
 const Hero = () => {
   const skills = ['React.js', 'Node.js', 'Next.js', 'PostgreSQL', 'AWS', 'TypeScript'];
@@ -103,7 +102,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-accent shadow-2xl">
                 <img 
-                  src={profileImage} 
+                  src="/lovable-uploads/933bbab0-2cd6-4179-99f0-50f6abdf4097.png" 
                   alt="Syed Zainuddin - Full Stack Developer" 
                   className="w-full h-full object-cover"
                 />
