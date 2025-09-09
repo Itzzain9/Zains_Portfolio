@@ -1,6 +1,6 @@
-import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { GraduationCap, Briefcase, MapPin, Calendar } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Briefcase, Calendar, GraduationCap } from 'lucide-react';
 const About = () => {
   return <section id="about" className="py-20 px-4 bg-secondary/50">
       <div className="container mx-auto">
@@ -16,7 +16,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Bio Section */}
           <div>
-            <h3 className="text-2xl font-semibold text-primary mb-6">Who I Zain</h3>
+            <h3 className="text-2xl font-semibold text-primary mb-6">Who I am</h3>
             <p className="text-muted-foreground leading-relaxed mb-6">
               Full Stack Developer with 1.5+ years of experience designing and building 
               scalable web applications using React.js, Node.js, Next.js, Express.js, 

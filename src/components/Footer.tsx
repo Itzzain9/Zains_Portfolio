@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
+import { ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -86,8 +86,8 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-semibold">Get In Touch</h4>
             <div className="space-y-2 text-primary-foreground/80">
-              <p>📧 syed.zainuddin@email.com</p>
-              <p>📱 +91 98765 43210</p>
+              <p>📧 itzzain9@email.com</p>
+              <p>📱 +91 84211 03016</p>
               <p>📍 Bangalore, India</p>
             </div>
             <Button 
@@ -102,7 +102,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/60 text-sm">
-            © 2024 Syed Zainuddin. All rights reserved.
+            © 2025 Syed Zainuddin. All rights reserved.
           </p>
           <Button 
             variant="ghost" 

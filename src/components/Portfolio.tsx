@@ -1,16 +1,14 @@
-import { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { 
-  ExternalLink, 
-  Github, 
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  ExternalLink,
   Filter,
-  Database,
+  Github,
   Shield,
-  Zap,
-  Cloud
+  Zap
 } from 'lucide-react';
+import { useState } from 'react';
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -44,58 +42,84 @@ const Portfolio = () => {
       githubUrl: '#',
       featured: true
     },
+    // {
+    //   id: 2,
+    //   title: 'E-Commerce API Gateway',
+    //   category: 'Backend',
+    //   description: 'RESTful API gateway for e-commerce platform with rate limiting, authentication, and microservices integration.',
+    //   longDescription: 'Developed a robust API gateway that serves as the central hub for an e-commerce platform, handling authentication, rate limiting, and routing to various microservices.',
+    //   image: '/placeholder.svg',
+    //   technologies: ['Node.js', 'Express.js', 'MongoDB', 'Redis', 'JWT'],
+    //   features: [
+    //     'API rate limiting and throttling',
+    //     'Centralized authentication',
+    //     'Microservices routing',
+    //     'Caching with Redis',
+    //     'API documentation and testing'
+    //   ],
+    //   achievements: [
+    //     'Reduced API response time by 40%',
+    //     'Implemented robust security measures',
+    //     'Scalable architecture design'
+    //   ],
+    //   liveUrl: '#',
+    //   githubUrl: '#',
+    //   featured: false
+    // },
+    // {
+    //   id: 3,
+    //   title: 'React Dashboard UI',
+    //   category: 'Frontend',
+    //   description: 'Modern, responsive dashboard interface built with React.js and Tailwind CSS featuring data visualization and real-time updates.',
+    //   longDescription: 'Created a comprehensive admin dashboard with real-time data visualization, user management, and analytics. The interface is fully responsive and optimized for performance.',
+    //   image: '/placeholder.svg',
+    //   technologies: ['React.js', 'TypeScript', 'Tailwind CSS', 'Chart.js', 'PrimeReact'],
+    //   features: [
+    //     'Real-time data visualization',
+    //     'Responsive design',
+    //     'Interactive charts and graphs',
+    //     'User management interface',
+    //     'Dark/light theme support'
+    //   ],
+    //   achievements: [
+    //     'Improved user engagement by 25%',
+    //     'Mobile-first responsive design',
+    //     'Optimized performance metrics'
+    //   ],
+    //   liveUrl: '#',
+    //   githubUrl: '#',
+    //   featured: false
+    // }
+
     {
-      id: 2,
-      title: 'E-Commerce API Gateway',
-      category: 'Backend',
-      description: 'RESTful API gateway for e-commerce platform with rate limiting, authentication, and microservices integration.',
-      longDescription: 'Developed a robust API gateway that serves as the central hub for an e-commerce platform, handling authentication, rate limiting, and routing to various microservices.',
+      id: 4,
+      title: 'AI Assist Project',
+      category: 'Full Stack',
+      description: 'An intelligent AI-powered assistant application that provides real-time answers, task automation, and personalized recommendations.',
+      longDescription: 'Developed an AI-powered assistant platform integrating natural language processing (NLP) and machine learning models. The system supports real-time question answering, task automation, personalized suggestions, and seamless integration with third-party APIs for extended functionality.',
       image: '/placeholder.svg',
-      technologies: ['Node.js', 'Express.js', 'MongoDB', 'Redis', 'JWT'],
+      technologies: ['Next.js', 'Node.js', 'Express.js', 'OpenAI API', 'MongoDB', 'Tailwind CSS'],
       features: [
-        'API rate limiting and throttling',
-        'Centralized authentication',
-        'Microservices routing',
-        'Caching with Redis',
-        'API documentation and testing'
+        'Natural language understanding',
+        'Real-time responses powered by AI',
+        'Task automation and scheduling',
+        'Integration with external APIs',
+        'User authentication and personalized dashboard'
       ],
       achievements: [
-        'Reduced API response time by 40%',
-        'Implemented robust security measures',
-        'Scalable architecture design'
+        'Enhanced user productivity by automating repetitive tasks',
+        'Achieved seamless integration with third-party services',
+        'Optimized AI response accuracy with fine-tuned prompts'
       ],
       liveUrl: '#',
       githubUrl: '#',
-      featured: false
-    },
-    {
-      id: 3,
-      title: 'React Dashboard UI',
-      category: 'Frontend',
-      description: 'Modern, responsive dashboard interface built with React.js and Tailwind CSS featuring data visualization and real-time updates.',
-      longDescription: 'Created a comprehensive admin dashboard with real-time data visualization, user management, and analytics. The interface is fully responsive and optimized for performance.',
-      image: '/placeholder.svg',
-      technologies: ['React.js', 'TypeScript', 'Tailwind CSS', 'Chart.js', 'PrimeReact'],
-      features: [
-        'Real-time data visualization',
-        'Responsive design',
-        'Interactive charts and graphs',
-        'User management interface',
-        'Dark/light theme support'
-      ],
-      achievements: [
-        'Improved user engagement by 25%',
-        'Mobile-first responsive design',
-        'Optimized performance metrics'
-      ],
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: false
+      featured: true
     }
+
   ];
 
-  const filteredProjects = activeFilter === 'All' 
-    ? projects 
+  const filteredProjects = activeFilter === 'All'
+    ? projects
     : projects.filter(project => project.category === activeFilter);
 
   return (
@@ -116,8 +140,8 @@ const Portfolio = () => {
             <Button
               key={filter}
               variant={activeFilter === filter ? "default" : "outline"}
-              className={activeFilter === filter 
-                ? "bg-accent hover:bg-red-hover text-accent-foreground" 
+              className={activeFilter === filter
+                ? "bg-accent hover:bg-red-hover text-accent-foreground"
                 : "hover:bg-accent hover:text-accent-foreground"
               }
               onClick={() => setActiveFilter(filter)}
@@ -131,11 +155,10 @@ const Portfolio = () => {
         {/* Projects Grid */}
         <div className="grid lg:grid-cols-2 gap-8">
           {filteredProjects.map((project, index) => (
-            <Card 
+            <Card
               key={project.id}
-              className={`group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
-                project.featured ? 'border-l-4 border-l-accent lg:col-span-2' : ''
-              }`}
+              className={`group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${project.featured ? 'border-l-4 border-l-accent lg:col-span-2' : ''
+                }`}
             >
               <CardHeader>
                 <div className="flex items-start justify-between mb-4">
@@ -172,7 +195,7 @@ const Portfolio = () => {
                   <h4 className="font-semibold text-primary mb-3">Technologies Used</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
-                      <Badge 
+                      <Badge
                         key={tech}
                         variant="secondary"
                         className="bg-secondary hover:bg-accent hover:text-accent-foreground transition-colors"
@@ -214,15 +237,15 @@ const Portfolio = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-4 pt-4 border-t border-border">
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     size="sm"
                     className="flex-1 hover:bg-accent hover:text-accent-foreground hover:border-accent"
                   >
                     <Github className="mr-2 h-4 w-4" />
                     Code
                   </Button>
-                  <Button 
+                  <Button
                     size="sm"
                     className="flex-1 bg-accent hover:bg-red-hover text-accent-foreground"
                   >

@@ -1,20 +1,20 @@
-import { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Linkedin, 
-  Github,
-  Send,
+import {
   Download,
-  MessageSquare
+  Github,
+  Linkedin,
+  Mail,
+  MapPin,
+  MessageSquare,
+  Phone,
+  Send
 } from 'lucide-react';
+import { useState } from 'react';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -30,15 +30,15 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'syed.zainuddin@email.com',
-      href: 'mailto:syed.zainuddin@email.com',
+      value: 'itzzain9@gmail.com',
+      href: 'mailto:itzzain9@gmail.com',
       color: 'text-blue-600'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+91 98765 43210',
-      href: 'tel:+919876543210',
+      value: '+91 8421103016',
+      href: 'tel:+918421103016',
       color: 'text-green-600'
     },
     {
@@ -52,7 +52,7 @@ const Contact = () => {
       icon: Linkedin,
       label: 'LinkedIn',
       value: '/in/syed-zainuddin',
-      href: 'https://linkedin.com/in/syed-zainuddin',
+      href: 'https://www.linkedin.com/in/zainuddin9/',
       color: 'text-blue-700'
     }
   ];
@@ -167,7 +167,7 @@ const Contact = () => {
                   className="hover:bg-accent hover:text-accent-foreground hover:border-accent transition-colors"
                   asChild
                 >
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/Itzzain9" target="_blank" rel="noopener noreferrer">
                     <Github className="h-5 w-5" />
                   </a>
                 </Button>
@@ -177,7 +177,7 @@ const Contact = () => {
                   className="hover:bg-accent hover:text-accent-foreground hover:border-accent transition-colors"
                   asChild
                 >
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/zainuddin9/" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="h-5 w-5" />
                   </a>
                 </Button>
@@ -194,13 +194,13 @@ const Contact = () => {
                       Get a detailed overview of my experience and skills
                     </p>
                   </div>
-                  <Button 
+                  <a href="https://drive.google.com/file/d/1bTjKXW54txygnyafBDSfc5Mz9f57wWrY/view?usp=sharing"><Button 
                     variant="outline"
                     className="hover:bg-accent hover:text-accent-foreground hover:border-accent"
                   >
                     <Download className="h-4 w-4 mr-2" />
                     Resume
-                  </Button>
+                  </Button></a>
                 </div>
               </CardContent>
             </Card>

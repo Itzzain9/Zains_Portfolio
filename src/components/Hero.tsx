@@ -1,5 +1,5 @@
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
 
 const Hero = () => {
@@ -24,7 +24,7 @@ const Hero = () => {
                 <span className="text-accent">Syed Zainuddin</span>
               </h1>
               <h2 className="text-xl md:text-2xl text-muted-foreground mb-6">
-                Full Stack Developer | Cloud-Native Applications
+                Full Stack Developer | MERN Stack 
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
                 Building scalable, secure, and performance-driven web applications with 
@@ -73,7 +73,7 @@ const Hero = () => {
                 className="hover:text-accent transition-colors"
                 asChild
               >
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/zainuddin9/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
@@ -83,7 +83,7 @@ const Hero = () => {
                 className="hover:text-accent transition-colors"
                 asChild
               >
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Itzzain9" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
@@ -91,8 +91,9 @@ const Hero = () => {
                 variant="ghost" 
                 size="icon"
                 className="hover:text-accent transition-colors"
-              >
-                <Download className="h-5 w-5" />
+                
+              ><a href="https://drive.google.com/file/d/1bTjKXW54txygnyafBDSfc5Mz9f57wWrY/view?usp=sharing  " target="_blank" rel="noopener noreferrer">
+                <Download className="h-5 w-5" /></a>
               </Button>
             </div>
           </div>
